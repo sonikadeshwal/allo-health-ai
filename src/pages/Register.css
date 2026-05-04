@@ -1,0 +1,94 @@
+.register-page {
+  min-height: 100vh;
+  background: var(--grad-hero);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.register-container {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.reg-logo { display: flex; align-items: center; gap: 10px; }
+.register-card { width: 100%; padding: 36px; }
+
+.stepper { display: flex; align-items: center; justify-content: center; margin-bottom: 28px; }
+.step { display: flex; align-items: center; gap: 8px; }
+.step-circle {
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; font-weight: 600; color: var(--text-muted);
+  transition: all 0.3s; flex-shrink: 0;
+}
+.step.active .step-circle { border-color: var(--primary); background: rgba(124,58,237,0.15); color: var(--primary-light); }
+.step.done .step-circle { background: var(--primary); border-color: var(--primary); color: white; }
+.step-label { font-size: 0.78rem; font-weight: 500; color: var(--text-muted); white-space: nowrap; }
+.step.active .step-label { color: var(--primary-light); }
+.step.done .step-label { color: var(--text-secondary); }
+.step-line { width: 40px; height: 2px; background: var(--border); margin: 0 8px; transition: background 0.3s; }
+.step-line.done { background: var(--primary); }
+
+.step-title { text-align: center; margin-bottom: 24px; }
+.step-title h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 6px; }
+.step-title p { font-size: 0.88rem; color: var(--text-muted); }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group.full { grid-column: 1 / -1; }
+.input-wrap { position: relative; }
+.input-icon { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none; }
+.input-with-icon { padding-left: 42px; }
+.pass-toggle { position: absolute; right: 13px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer; padding: 0; display: flex; }
+.input-field.error { border-color: var(--error); }
+.err-msg { font-size: 0.75rem; color: var(--error); }
+
+.gender-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+.gender-pill {
+  padding: 8px 16px; border-radius: 50px; border: 1.5px solid var(--border);
+  background: transparent; color: var(--text-secondary);
+  font-family: 'Inter', sans-serif; font-size: 0.85rem; cursor: pointer; transition: all 0.2s;
+}
+.gender-pill:hover { border-color: var(--primary-light); color: var(--primary-light); }
+.gender-pill.selected { background: rgba(124,58,237,0.15); border-color: var(--primary); color: var(--primary-light); }
+
+.chip-group { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 7px 14px; border-radius: 50px; border: 1.5px solid var(--border);
+  background: transparent; color: var(--text-secondary);
+  font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 500; cursor: pointer; transition: all 0.2s;
+}
+.chip:hover { border-color: var(--primary-light); color: var(--primary-light); }
+.chip-selected { background: rgba(124,58,237,0.12); border-color: var(--primary); color: var(--primary-light); }
+
+.pass-strength { display: flex; gap: 5px; margin-top: 8px; }
+.strength-bar { flex: 1; height: 3px; border-radius: 10px; background: var(--border); transition: background 0.3s; }
+.strength-bar.weak { background: var(--error); }
+.strength-bar.medium { background: var(--warning); }
+.strength-bar.strong { background: var(--success); }
+
+.terms-box {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 14px; background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border); border-radius: 12px;
+  font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;
+}
+.terms-box input { margin-top: 3px; accent-color: var(--primary); }
+.terms-box a { color: var(--primary-light); text-decoration: none; }
+.step-actions { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+.reg-signin { text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: 16px; }
+.reg-signin a { color: var(--primary-light); text-decoration: none; font-weight: 600; }
+
+@media (max-width: 480px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .step-label { display: none; }
+  .register-card { padding: 24px; }
+}
