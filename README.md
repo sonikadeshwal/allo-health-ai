@@ -2,10 +2,11 @@
 
 > An AI-powered sexual & reproductive health platform with private consultations, health tracking, and personalized wellness dashboards.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-purple?style=for-the-badge)](https://allo-health-ai.netlify.app)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-purple?style=for-the-badge)](https://allo-health-ai.vercel.app/)
 [![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)](https://react.dev)
 [![Groq](https://img.shields.io/badge/Groq-Llama3-orange?style=for-the-badge)](https://groq.com)
 [![Vite](https://img.shields.io/badge/Vite-5-yellow?style=for-the-badge&logo=vite)](https://vitejs.dev)
+
 
 ---
 
